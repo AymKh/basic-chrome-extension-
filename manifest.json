@@ -1,16 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "Chrome extension BoilerPlate",
+  "name": "tis-but-a-scratch",
+  "description": "A simple extension, that shows a popup with a message",
   "version": "1.0.0",
-  "action": { "default_popup": "index.html" },
+  "action": {
+    "default_popup": "index.html"
+  },
   "background": {
     "service_worker": "./src/background/background.ts"
   },
-  "options_page" : "src/optionsPage/optionsPage.html",
+  "options_page": "src/optionsPage/optionsPage.html",
   "content_scripts": [
     {
-      "js": ["src/content/content.tsx"],
-      "matches": ["<all_urls>"]
+      "js": [
+        "src/content/content.tsx"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ]
 }
